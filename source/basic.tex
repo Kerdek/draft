@@ -3616,8 +3616,11 @@ per thread, and use of the declared name refers to the entity associated with
 the current thread.
 
 \pnum
-A variable with thread storage duration shall be initialized before
-its first odr-use\iref{basic.def.odr} and, if constructed, shall be destroyed on thread exit.
+\begin{note}
+A variable with thread storage duration is initialized as specified
+in~\ref{basic.start.static}, \ref{basic.start.dynamic}, and \ref{stmt.dcl}
+and, if constructed, is destroyed on thread exit\iref{basic.start.term}.
+\end{note}
 
 \rSec3[basic.stc.auto]{Automatic storage duration}
 
