@@ -2607,12 +2607,6 @@ linked together. A translation unit consists
 of a sequence of declarations.
 
 \begin{bnf}
-\nontermdef{translation-unit}\br
-    \opt{top-level-declaration-seq}\br
-    \opt{global-module-fragment} module-declaration \opt{top-level-declaration-seq} \opt{private-module-fragment}
-\end{bnf}
-
-\begin{bnf}
 \nontermdef{private-module-fragment}\br
     \keyword{module} \terminal{:} \keyword{private} \terminal{;} \opt{top-level-declaration-seq}
 \end{bnf}
@@ -2628,13 +2622,6 @@ of a sequence of declarations.
     module-import-declaration\br
     declaration
 \end{bnf}
-
-\pnum
-A \grammarterm{private-module-fragment} shall appear only
-in a primary module interface unit\iref{module.unit}.
-A module unit with a \grammarterm{private-module-fragment}
-shall be the only module unit of its module;
-no diagnostic is required.
 
 \pnum
 A token sequence beginning with
