@@ -7134,13 +7134,17 @@ is a valid core constant expression unless:
 \item
   for a call to \tcode{std::construct_at} or \tcode{std::ranges::construct_at},
   the first argument, of type \tcode{T*},
-  does not point to storage allocated with \tcode{std::allocator<T>} or
+  does not point
+  to storage allocated with \tcode{std::allocator<T>} or
+  to an object whose lifetime began within the evaluation of \tcode{e}, or
   the evaluation of the underlying constructor call
   is not a core constant expression, or
 \item
   for a call to \tcode{std::destroy_at} or \tcode{std::ranges::destroy_at},
   the first argument, of type \tcode{T*},
-  does not point to storage allocated with \tcode{std::allocator<T>} or
+  does not point
+  to storage allocated with \tcode{std::allocator<T>} or
+  to an object whose lifetime began within the evaluation of \tcode{e}, or
   the evaluation of the underlying destructor call
   is not a core constant expression.
 \end{itemize}
